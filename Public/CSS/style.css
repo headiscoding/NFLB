@@ -1,0 +1,205 @@
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+}
+body, section, div {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+/* Main config */
+.Large {
+  --Nav: 25%;
+}
+.Small {
+  --Nav: 5%;
+}
+body {
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  grid-template-columns: var(--Nav)  auto;
+  grid-template-areas: 
+  'Header Header'
+  'Nav Body'
+  'Nav Footer';
+  background: var(--Main-BG);
+  color: var(--Main-Text);
+  max-width: 100vw;
+  max-height: 100vh;
+  font-size: 15px
+}
+/* Header */
+.Header {
+  grid-area: Header;
+  font-size: 6.25rem;
+  text-align: center;
+  background: var(--Secondary-BG);
+  font-family: 'Lato', sans-serif;
+
+/* Split Up Login And Title */
+  display: grid;
+  grid-template-columns: 85% 15%;
+  grid-template-rows: 1fr;
+}
+.Header .Login {
+  display: inline-block;
+}
+.Login_Button {
+  color: var(--Secondary-Text);
+  transform: translate(25%, calc(50% - .5rem));
+  background-color: var(--Third-Button);
+  height: auto;
+  width: auto;
+  max-height: 100%;
+  max-width: 75%;
+  border-radius: 0.3125rem;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: .25rem;
+}
+.Login_Button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.Body .Login_Button{
+  padding: 1rem;
+  font-size: 1rem;
+  left: 50%;
+  position: absolute;
+}
+/* Nav */
+.Nav {
+  grid-area: Nav;
+  display: grid;
+  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: 1fr;
+  height: 100% !important;
+  font-size: 1.75rem;
+  text-align: center;
+  background: var(--Main-Button);
+  font-family: 'Lato', sans-serif;
+}
+.Nav .Button:not(#Main) {
+  display: none;
+}
+.Nav .Button {
+  border: none;
+  position: relative;
+}
+.Nav .Button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Nav .Button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.Nav .Button:hover {
+  box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.25);
+  color: #f9aa33;
+  cursor: pointer;
+}
+/* Content */
+.Body{
+  grid-area: Body;
+  height: 100%;
+  font-size: 2.5rem;
+  font-family: 'Roboto', sans-serif;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  position: relative;
+}
+/* Account */
+.Account{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+}
+.Content {
+  background-color: #fefefe;
+  margin: 5vh auto;
+  padding: 0.625rem;
+  border: 0.0625rem solid #888;
+  border-radius: 0.625rem;
+  width: 60%;
+  height: max-content;
+  max-height: 70vh;
+}
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 3em;
+  font-weight: bold;
+}
+.close:hover,.close:focus {
+  color: rgb(255, 0, 0);
+  text-decoration: none;
+  cursor: pointer;
+} 
+.Label {
+  background-color: rgb(0, 110, 255);
+  width: 100%;
+  border-radius: 0.3125rem 0.3125rem 0 0;
+  padding: 1%;
+  font-size: 2em;
+  text-align: center;
+  box-sizing: border-box;
+}
+input[type=email], input[type=password] {
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  display: block;
+  border: 0.0625rem solid #ccc;
+  box-sizing: border-box;
+}
+.Submit_Form {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+}
+Button {
+  display: inline-block;
+  background-color: green;
+  
+  padding: 2%;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1.75em;
+  outline: none;
+}
+Button:nth-child(1) {
+  border-radius: 0.3125rem;
+}
+Button:nth-child(2) {
+  border-radius: 0.3125rem;
+}
+Button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+/* Footer */
+.Footer {
+  grid-area: Footer;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: -0.0625rem;
+}
+.flow { 
+  width: auto;
+  height: auto;
+  max-height: 100%;
+}

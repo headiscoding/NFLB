@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="Images/NFLB.png" type="images/x-icon"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Food Left Behind!</title>
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- css -->
+    <link href="CSS/Color.css" rel="stylesheet" type="text/css"/>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css"/>
+  </head>
+	<body class="Small" onload="Load()">
+    <section class="Header">
+      <div class="Title">No Food Left Behind!</div>
+      <div class="Login">
+        <div class="Login_Button" onclick="Show('Open');">
+          Register
+        </div>
+    </section>
+    <section class="Nav">
+      <div class="Button Nav_Restaurant" id="Main" onclick="Change_Page(this, 'Restaurant')">
+        <span class="material-icons">fastfood</span>
+      </div>
+    	<div class="Button Nav_Event" id="Main" onclick="Change_Page(this, 'Event')">
+        <span class="material-icons">event</span>
+      </div>
+    	<div class="Button Nav_Volunteer" id="Main" onclick="Change_Page(this, 'Volunteer')">
+        <span class="material-icons">wheelchair_pickup</span>
+      </div>
+    	<div class="Button Nav_Foodbank" id="Main" onclick="Change_Page(this, 'Foodbank')">
+        <span class="material-icons">food_bank</span>
+      </div>  
+      <div class="Button Nav_Flowchart" id="Main" onclick="Change_Page(this, 'Flow')">
+        <span class="material-icons">insert_chart</span>
+      </div>  
+      <!-- put any new nav elements before this -->
+      <div class="Button Nav_Back" id="Back" onclick="Change_Page(this, 'Main')">
+        <span class="material-icons">arrow_back</span>
+      </div>    
+      <div class="Button Nav_hours" id="Volunteer" onclick="Change_Page(this, 'Main')">
+        <span class="material-icons">schedule</span>
+      </div>
+      <div class="Button Nav_Size" id="Main" onclick="Size()">
+        <span class="material-icons">arrow_forward_ios</span>
+      </div>
+    </section>
+    <section id="Body" class="Body">
+      No Food Left Behind, also known as a NFLB, is a food donation app, that doesn't want food to go to waste. The food that you have leftover, should never be wasted and should be donated for a good cause. Click the button that can classify your role in our society. If you are a volunteer that happens to be in high school, you can get credits from this!
+      <div class="Login_Button" onclick="Show('Open');">
+        Login as Resturant Owner
+      </div>
+    </section>
+    <section class="Footer">
+      <p>
+        Copyright © 2020 
+        <a href="https://github.com/headiscoding">
+        headiscoding</a> - All Rights Reserved
+      </p>
+    </section>
+    <section class="Account">
+      <div class="Content">
+        <span class="close" onclick="Show('Close');">&times;</span>
+        <form>
+          <div class="Label"><b>Email</b></div>
+          <input type="email" placeholder="Enter Username" name="uname" required>
+          <div class="Label"><b>Password</b></div>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <div class="Submit_Form">
+            <button type="button" onclick="Login('Login')">Login</button>
+            <button type="button" onclick="Login('Register')">Register</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <script type="text/javascript" src="JS/Login.js"></script>
+    <script type="text/javascript" src="JS/Nav.js"></script>
+    <script type="text/javascript" src="JS/Nav-Size.js"></script>
+  </body>
+</html>
